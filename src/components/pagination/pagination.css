@@ -1,0 +1,13 @@
+.pagination{
+    padding:30px;
+    margin:0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:20px;
+}
+.pagination > span{
+    padding:8px 12px;
+    border:1px solid #323232;
+}
+

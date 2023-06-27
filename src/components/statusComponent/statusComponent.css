@@ -1,0 +1,32 @@
+.status_edit{
+    z-index: 99999;
+    height: 0;
+    position: absolute;
+    top:120%;
+    left:0px;
+    width: 100%;
+    overflow: hidden;
+    transition: height 0.3s ease;
+    z-index: 999;
+}
+.status_edit_open{
+    height: auto;
+    opacity: 1!important;
+    padding:30px 10px 10px;
+    background-color: #fff;
+    border:1px solid #ccc;
+    border-radius: 12px;
+    transition: all 0.3s;
+}
+
+.status_edit_close{
+    transform: translateY(-20px);
+    transition: all 0.3s;
+}
+
+.status_edit > form{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    align-items: center;
+}

@@ -1,0 +1,298 @@
+header{
+    z-index:999999;
+    position: sticky;
+    top:0px;
+    color:#323232;
+    /* padding:5px 15px; */
+    background-color: #f8f8f8;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.5s;
+}
+
+/*Logo*/
+.start_section{
+    position: relative;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:30px;
+}
+.start_section   img{
+    position: relative;
+    width: 90px;
+    height: 75px;
+    opacity: 0.8;
+    animation: logo_appear 1.2s linear;
+}
+
+@keyframes logo_appear {
+    from{opacity:0}
+    to{opacity:0.8}
+}
+.change_language_section{
+    padding:30px 20px;
+    position: relative;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 17px;
+    transition: all 0.25s;
+}
+.change_language_section:hover{
+    background-color: #dfdddd;
+}
+.change_language_section > svg{
+   position: absolute;
+   top:25px;
+   right:8px;
+   z-index: 9999;
+}
+.admin_header{
+    font-weight: 600;
+    font-size: 17px;
+}
+
+
+/*                     END SECTION                 */
+
+.end_section{
+    position: relative;
+    width: 58%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap:50px;
+    /* animation: end_section_appear 0.8s;
+    animation-timing-function: linear; */
+    
+}
+
+@keyframes end_section_appear {
+    0%{
+        position: absolute;
+        right:-50px;
+        width: 15%;
+    }
+    25%{
+        position: absolute;
+        right:-25px;
+        width: 25%
+    }
+    50%{
+        position: absolute;
+        right:0px;
+        width: 35%
+    }
+    75%{
+        position: absolute;
+        right:25px;
+        width: 45%
+    }
+    100%{
+        position: absolute;
+        right:50px;
+        width: 58%
+    }
+}
+/*form*/
+.search_form{
+    position: relative;
+}
+
+/*Menu*/
+
+.menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu > li a {
+    position: relative;
+    padding:30px 20px;
+    color:#323232;
+    font-size: 17px;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.menu > li a:hover{
+    background-color: #dfdddd;
+}
+
+.auth{
+    cursor: pointer;
+}
+
+/*Auth menu*/
+.auth_menu{
+    width: 250px;
+    position: absolute;
+    bottom: -170px;
+    right:60px;
+    padding:12px 10px;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    align-items: center;
+    border:1px solid #ccc;
+    background-color: #f8f8f8;
+    z-index: 999999;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px #eee;
+    transition: all 0.2s;
+}
+.auth_menu_inactive{
+    transform: rotateX(90deg);
+    transform-origin: top;
+    transition: all 0.2s;
+}
+
+.auth_menu > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.auth_menu a{ 
+    padding:5px;
+    position: relative;
+    font-weight: 700;
+    color:#323232
+}
+.auth_menu a::before{
+    position: absolute;
+    bottom:0px;
+    left:0px;
+    content: "";
+    background-color: #323232;
+    width: 0%;
+    height:2px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    transition: all 0.2s;
+}
+.auth_menu a:hover::before{
+    width: 100%;
+}
+
+.auth_menu  .edit_account{
+    color:#ef7215
+}
+.auth_menu  .edit_account::before{
+    background-color: #ef7215;
+}
+.close_auth_button{
+    position: absolute;
+    top:0px;
+    right:2px;
+    border:none;
+    outline: none;
+    cursor: pointer;
+    background: transparent;
+}
+
+
+/*Cart*/
+.cart_section{
+    cursor: pointer;
+    position: relative;
+}
+.cart_quantity{
+    position: absolute;
+    top:-10px;
+    right:-20px;
+    padding:5px 10px;
+    background-color: #ef7215;
+    color:#fff;
+    text-align: center;
+    border-radius: 50%;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+
+/*                Responsive                */
+
+
+.responsive_menu_button{
+    width: 50px;
+    height: 50px;
+    position: relative;
+}
+.responsive_menu_button > span{
+    background-color: #323232;
+    width: 100%;
+    height: 5px;
+    border-radius: 15px;
+    display: block;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    transition:all 0.4s
+}
+.responsive_menu_button > span.line_1{
+    transform: translate(-50%,-20px);
+}
+
+.responsive_menu_button > span.line_3{
+    transform: translate(-50%,15px);
+
+}
+
+.responsive_menu_button_opened > span.line_1{
+    transform: translate(-50%,-50%) rotate(-45deg);
+
+}
+.responsive_menu_button_opened > span.line_3{
+    transform:translate(-50%,-50%) rotate(45deg);
+}
+.responsive_menu_button_opened > span.line_2{
+    width: 0;
+}
+/*  responsive_menu_  */
+
+.responsive_menu > .menu{
+    width: 400px;
+    position: fixed;
+    z-index:999;
+    height: 100vh;
+    transform: translateX(120%);
+    right: 0px;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    align-items: center;
+    justify-content: flex-start;
+    padding:20px;
+    background-color: #323232;
+    transition: all 0.3s;
+}
+.responsive_menu > .menu li{
+    width: 100%;
+}
+.responsive_menu > .menu li a{
+    color: #fff !important;
+    padding:15px;
+    display: block;
+    width: 100%;
+}
+.responsive_menu > .menu li a:hover{
+    border-bottom: 1px solid #ccc;
+    background-color: initial;
+}
+.responsive_menu > .menu_active{
+    transform: translate(0%);
+    transition: all 0.3s;
+}
+
+.responsive_menu > .menu svg{
+    position: absolute;
+    top:5px;
+    right:0px;
+}

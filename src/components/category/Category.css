@@ -1,0 +1,73 @@
+
+.categories_list > li{
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding:5px 10px;
+    color:#323232;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+} 
+
+.categories_list > li:nth-child(even){
+    background-color: #eee;
+}
+
+.categories_list > li > span{
+    width: 25%;
+}
+.category_btns{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:20px;
+}
+.category_btns > .btn{
+    min-width: 125px;
+}
+
+
+
+.edit_category_form_container,.types_container,.create_type{
+    height: 0;
+    position: absolute;
+    top:110%;
+    left:0px;
+    width: 100%;
+    overflow: hidden;
+    transition: height 0.3s ease;
+    z-index: 999;
+}
+.edit_category_form_container_open,.types_container_open,.create_type_open{
+    height: auto;
+    opacity: 1!important;
+    padding:30px 10px 10px;
+    background-color: #fff;
+    border:1px solid #ccc;
+    border-radius: 12px;
+    transition: all 0.3s;
+}
+.edit_category_form_container_close,.types_container_close,.create_type_close{ 
+    transform: translateY(-20px);
+    transition: all 0.3s;
+}
+
+.edit_category_form_container form,.create_type form{
+  transform: translateY(0px);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap:10px;
+}
+
+
+/*Types container*/
+.types_container{
+    width: 120%;
+    left:-20%; 
+}

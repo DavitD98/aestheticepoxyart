@@ -1,0 +1,64 @@
+.filters_main{
+    width: 100%;
+    background-color: #f8f8f8;
+    padding:20px 0px 5px 0px;
+}
+.filters{
+    padding:15px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap:30px;
+    border-top:1px solid #eee;
+    transition: all 0.3s;
+}
+
+.filters select{
+    padding:5px 15px;
+}
+
+.filters input[type="text"]{
+    padding:5px 10px;
+    margin:0px 20px;
+}
+.price_filters > input{
+    width: 150px;
+}
+.filter_buttons{
+    position: absolute;
+    right:180px;
+    animation: apply_enable_appear 0.3s linear;
+    transition: all 0.3s;
+
+    display: flex;
+    gap:20px;
+    align-items: center;
+    
+}
+
+
+
+@keyframes apply_enable_appear {
+    0%{
+        right: -50px;
+    }
+    25%{
+        right: 100px;
+    }
+    50%{
+        right:250px
+    }
+    75%{
+        right:210px
+    }
+    100%{
+        right:200px
+    }
+}
+
+/*Responsive*/
+.filters_active{
+    transform: translate(0%)!important;
+    transition: all 0.3s;
+}
+

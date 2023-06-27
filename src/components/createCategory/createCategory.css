@@ -1,0 +1,107 @@
+.create_category_main{
+    width: 100%;
+    border:1px solid #ccc;
+    border-radius: 12px;
+    padding:20px;
+    width: 100%;
+    margin:30px auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+
+.create_category_main h2{
+    color:#323232
+}
+.category_section{
+    display: flex;
+    justify-content: space-between;
+}
+.create_category_form{
+   position: relative;
+   width: 32%;
+   align-self: flex-start;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap:10px;
+   padding:0px 0px 50px;
+   border-right: 1px solid #ccc;
+}
+
+.create_category_form .btn{
+    position: absolute;
+    bottom:2px;
+    right:40%;
+    animation:submit_button_appear 0.5s linear ;
+}
+
+@keyframes submit_button_appear {
+    0%{opacity:0.1;right:200px};
+    25%{opacity:0.3;right:200px};
+    50%{opacity:0.6;right:300px};
+    75%{opacity:0.9;right:400px};
+    100%{opacity:1;right:500px};
+}
+
+.check_all_delete{
+    width: 100%;
+    position: relative;
+    text-align: left;
+    padding:5px 20px;
+}
+.check_all_delete > .btnDelete{
+    position: absolute;
+    left:180px;
+    animation: deleteAllBtn_appear 0.3s linear;
+}
+
+@keyframes deleteAllBtn_appear {
+    0%{opacity:0.1;left:100%};
+    25%{opacity:0.3;right:80%};
+    50%{opacity:0.6;right:50%};
+    75%{opacity:0.9;right:30%};
+    100%{opacity:1;right:22%};
+}
+/*categories list*/
+
+.categories_container{
+    width: 67%;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    align-items: center;
+    position: relative;
+}
+
+.categories_container h4{
+    color:#323232
+}
+.categories_container > .btn{
+    position: absolute;
+    top:-10px;
+    right:5px;
+    animation:delete_button_appear 0.5s linear ;
+    height:40px;
+    width: 100px;
+
+}
+@keyframes delete_button_appear {
+    0%{opacity:0.1;right:-100px};
+    25%{opacity:0.3;right:-50px};
+    50%{opacity:0.6;right:0px};
+    75%{opacity:0.9;right:0px};
+    100%{opacity:1;right:10px};
+}
+.categories_list{
+    width: 100%;
+    margin-top:10px;
+    border:1px solid #ccc;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+

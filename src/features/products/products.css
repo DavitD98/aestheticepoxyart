@@ -1,0 +1,33 @@
+.product_container{
+    width: 100%;
+    margin:50px auto;
+    display: grid;
+    grid-template-columns: 24% 24% 24% 24%;
+    gap:30px;
+    justify-items: center;
+    padding:30px;
+}
+
+.products_check_and_delete_btns{
+    position: relative;
+}
+.products_check_and_delete_btns > .btnDelete{
+    position: absolute;
+    left:150px;
+    animation: products_delete_button_appear 0.5s linear;
+}
+
+@keyframes products_delete_button_appear {
+     0%{opacity: 0.4;left:500px;}
+     25%{opacity: 0.5;left:400px;}
+     50%{opacity: 0.7;left:300px;}
+     75%{opacity: 0.8;left:200px;}
+     100%{opacity: 1;left:160px;}
+}
+
+.no_products_found{
+    margin:10px auto;
+    width: 300px;
+    text-align: center;
+    color:#ccc
+}

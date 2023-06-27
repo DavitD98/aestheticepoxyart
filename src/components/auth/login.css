@@ -1,0 +1,42 @@
+
+.auth_form{
+    margin:20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap:20px;
+    padding:30px 50px;
+    border:1px solid #ccc;
+    border-radius: 8px;
+    transition: all 0.2s;
+    animation-name: folding;
+    animation-duration: 0.5s;
+    transform-origin: 20%;
+}
+
+@keyframes folding {
+    from{transform: rotateX(90deg)};
+    to{transform: rotateX(0deg)}; 
+}
+
+.auth_form input{
+   width: 250px;
+   padding:8px;
+   border:none;
+   outline: none;
+   color:#323232;
+   font-size:16px;
+   font-weight: 500;
+   border-bottom: 2px solid #ccc;
+   background-color: #f8f8f8;
+   transition: all 0.35s;
+}
+.auth_form button{
+   width: 200px;
+}
+.auth_form .sign_up{
+   color:blue;
+   font-weight: 600;
+   text-align: center;
+}

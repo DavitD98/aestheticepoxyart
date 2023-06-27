@@ -1,0 +1,28 @@
+.search_form{
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap:20px;
+}
+
+.search_form svg{
+    position: absolute;
+    top:20%;
+    right:10%
+}
+
+/*Responsive*/
+
+@media (max-width:1024px) {
+    .search_form {
+        width: 100%;
+        background-color: #f8f8f8;
+        padding:10px 40px;
+    }
+    .search_form input{
+        width: 250px;
+    }
+    .search_form svg{
+        display: none;
+    }
+}

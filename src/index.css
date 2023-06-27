@@ -11,3 +11,244 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+body{
+  background-color: #f8f8f8;
+}
+
+.App{
+  max-width: 1360px;
+  margin:0px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#root{
+  width: 100%;
+  height:100%
+}
+
+
+/**/
+*{
+  box-sizing: border-box;
+  margin:0;
+  padding:0
+}
+ul,ol,li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color:blue
+}
+a:active{
+  color:initial
+}
+main{
+  width: 100%;
+  margin:0px auto;
+  padding:25px 0px;
+}
+.text_input,.main_select {
+  transition: all 0.35s;
+  padding:8px 30px;
+  border:none;
+  outline: none;
+  border-radius: 15px;
+  background-color: #eee;
+  font-size: 19px;
+}
+.main_select{
+  cursor: pointer;
+  color:#323232;
+  text-align: center;
+}
+.main_select > option {
+  color:#323232
+}
+
+.check{
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 30px;
+  height: 25px;
+  border: 1px solid #323232;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+}
+.check:checked{
+  background-color: #323232;
+  color:#fff
+}
+.check:checked::before{
+  content: "\2713"; /* Checkmark symbol */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  font-weight: 600;
+}
+.btn{
+  border:1px solid #323232;
+  color:#323232;
+  outline: none;
+  padding:8px 20px;
+  font-size: 19px;
+  cursor: pointer;
+  background-color: #fff;
+  transition: all 0.1s;
+}
+.btnWhite:hover{
+  background-color: #323232;
+  color:#fff;
+}
+
+.btnBlack{
+  background-color: #323232;
+  color:#fff;
+}
+.btnBlack:hover{
+  background-color: #fff;
+  color:#323232
+}
+
+.btnDelete{
+  border:1px solid #ef7215;
+  background-color: #ef7215;
+  color:#fff
+}
+.btnDelete:hover{
+  background-color: #323232;
+  color:#ef7215
+}
+.btnGreen{
+  background-color: #25BAB5;
+  color:#fff;
+  border: 1px solid #25BAB5;
+}
+.btnGreen:hover{
+  background-color: #fff;
+  color:#25BAB5
+}
+.close_menu{
+  position: absolute;
+  top:5px;
+  right:5px;
+  border:none;
+  outline: none;
+  cursor: pointer;
+  background: transparent;
+
+}
+
+.link{
+  color:blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.wrong_field,.error_message{
+  color:#fff;
+  background-color: rgb(162, 3, 3);
+  padding:8px 15px;
+  transition: all 0.2s;
+  display: inline;
+  border-radius: 5px;
+}
+
+.wrong_field_inactive,.error_message_inactive{
+  display: inline;
+  transform: rotateX(90deg);
+  transform-origin: top;
+  transition: all 0.2s;
+}
+
+/*                     LOADING                  */
+@import url("./components/loading/loading.css");
+
+/*                   ALERT WINDOW             */
+@import url("./components/alertWindow.js/alertWindow.css");
+
+/*                     HEADER                  */
+@import url("./components/header/header.css");
+/*search*/
+@import url("./components/searchComponent/searchComponent.css");
+
+/*                      CART                   */
+@import url("./components/cart/cart.css");
+
+/*Cart product*/
+@import url("./components/cartProduct/cartProduct.css");
+
+/*                    TOKEN ERROR               */
+
+@import url("./features/user/tokenExpired.css");
+
+/*Languages*/
+@import url("./features/languages/languages.css");
+
+
+/*                     PRODUCTS                  */
+@import url('./features/products/products.css');
+
+/*Product*/
+@import url('./components/product/product.css');
+
+/*pagination*/
+@import url("./components/pagination/pagination.css");
+
+/*Detail Product*/
+@import url("./components/detailProduct/detailProduct.css");
+
+/*Related Products*/
+@import url("./components/relatedProducts/relatedProducts.css");
+
+
+
+/*                      AUTH                        */
+@import url('./components/auth/login.css');
+
+/*                      Edit Auth                    */
+@import url("./components/authEdit/authEdit.css");
+
+/*                      ORDER                       */
+@import url("./components/order/order.css");
+
+/*                     FILTERS                    */
+@import url("./components/filters/filters.css");
+
+/*                      HISTORY                  */
+@import url("./components/history/history.css");
+@import url("./components/historyItem/historyItem.css");
+
+
+/*                    404 Not Found            */
+@import url("./components/notFound/notFound.css");
+
+/*                       ADMIN PAGES               */
+
+/*Create,Edut product*/
+@import url("./components/CreateProduct/createProduct.css");
+
+/*Create & edit category,type*/
+@import url("./components/createCategory/createCategory.css");
+@import url("./components/category/Category.css");
+
+/*Type*/
+@import url("./components/types/types.css");
+@import url("./components/type/type.css");
+
+/*Orders Admin*/
+@import url("./components/ordersAdmin/ordersAdmin.css");
+
+@import url("./components/orderStatus/ordersStatus.css");
+
+@import url("./components/statusComponent/statusComponent.css");
+
+
+@import url("./components/footer/footer.css");
+/*Responsive design*/
+@import url("./responsive.css");

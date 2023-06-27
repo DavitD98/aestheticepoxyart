@@ -1,0 +1,61 @@
+.orders_statuses{
+    width: 32%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:20px
+}
+.orders_statuses > form{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    align-items: center;
+}
+
+/*Status list*/
+
+.statuses_container{
+    width: 100%;
+    padding: 10px;
+    border-radius: 12px;
+    border:1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:20px;
+}
+
+.status_list_container{
+    height: 0%;
+    width: 100%;
+    transition: all 0.3s;
+}
+.status_list_container_open{
+    height: auto;
+    transition: all 0.3s;
+    padding:20px 8px;
+    border-radius: 12px;
+    background-color: #f8f8f8;
+}
+
+.status_list{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:15px
+  }
+  .status_list > li{
+      position: relative;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap:5px;
+  }
+  .status_list > li > span{
+      font-weight: 600;
+      width: 40%;
+      word-wrap: break-word
+  }
+  

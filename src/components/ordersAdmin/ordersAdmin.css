@@ -1,0 +1,27 @@
+.orders_admin{
+    margin:20px auto;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.orders_admin  .orders_table{
+    width: 65%;
+}
+.orders_admin .orders_table td{
+    padding-bottom:50px;
+    position: relative;
+}
+.orders_admin .orders_table td .btn{
+    position: absolute;
+    bottom:10px;
+    right:25%; 
+    animation: save_button_appear 0.3s linear;
+}
+@keyframes save_button_appear {
+    0%{right: -10%;opacity: 0.4;}
+    25%{right: 0%;opacity: 0.5;}
+    50%{right: 10%;opacity: 0.6;}
+    75%{right: 20%;opacity: 0.7;}
+    100%{right: 35%;opacity:0.9;}
+}

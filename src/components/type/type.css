@@ -1,0 +1,68 @@
+.type_name{
+    width: 15%;
+}
+
+.edit_type_section{
+    position: relative;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.edit_type_form_container{
+   position: absolute;
+   width: 80%;
+   top:0px;
+   left:150px;
+   transition: all 0.3s;
+}
+.edit_type_form_container_close{
+    width: 0;
+    opacity: 0;
+}
+.edit_type_form_container_open{
+    width: 80%;
+}
+
+/*Edit form*/
+.edit_type_form_container form{
+    width: 100%;
+    display: flex;
+    align-items: center;    
+    gap:10px;
+}
+
+.edit_type_form_container form input{
+    border:1px solid #ccc;
+    max-width: 200px;
+}
+
+
+.type_error_message{
+    padding:10px 5px;
+    border-radius: 10px;
+    position: absolute;
+    top:110%;
+    width: 50%;
+    left:25%;
+    background-color: rgb(162, 3, 3);
+    color:#fff;
+    text-align: center;
+    transition: all 0.2s;
+    z-index: 999999;
+
+}
+
+.type_error_message_inactive{
+   height: 0;
+   transition: all 0.2s;
+   
+}
+
+@keyframes type_error_appear {
+    0%{left:22%};
+    25%{left:28%}
+    50%{left:22%}
+    75%{left:27%%}
+    100%{left:26%}
+}

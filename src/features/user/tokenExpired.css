@@ -1,0 +1,15 @@
+
+.token_expired{
+    max-width: 30%;
+    margin:0px auto;
+    position: relative;
+    margin:15px auto;
+    padding:12px 20px; 
+    font-weight: 500;
+    border:1px solid #eee;
+    border-radius: 10px;
+}
+.token_expired button{
+    top:0px;
+    right:0px
+}
