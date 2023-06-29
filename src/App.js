@@ -50,10 +50,14 @@ function App() {
  
 
   // Fetch products
-  useEffect(() => {
-      const fetchParameters = {
+  useEffect(() => {  
+      const getProducts = () => {
+         const fetchParameters = {
+         }
+         dispatch(fetchProducts({fetchParameters}))
       }
-      dispatch(fetchProducts({fetchParameters}))
+      
+      setTimeout(getProducts,1500)
   },[dispatch])
 
   // Fetch categories & types 
