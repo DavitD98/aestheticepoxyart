@@ -48,7 +48,7 @@ function App() {
     },[localStorage])
 
  
-
+//
   // Fetch products
   useEffect(() => {  
       const getProducts = () => {
