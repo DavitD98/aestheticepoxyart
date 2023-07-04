@@ -21,6 +21,10 @@ export const dialogues = {
             arm:"Հեռախոսահամարը չպետք է պարունակի տառ կամ նիշ",
             eng:"Phone could not contain eny letter or character"
         },
+        invalidEmail:{
+            arm:"Էլ. հասցեն վավեր չէ",
+            eng:"Invalid email"
+        },
         passConfirmFailed:{
             arm:"Սխալ գաղտնաբառի հաստատում",
             eng:"Password confirm failed"
@@ -48,6 +52,10 @@ export const dialogues = {
         phone:{
             arm:"Հեռախոսահամար",
             eng:"Phone"
+        },
+        phoneRegister:{
+            arm:"Հեռախոսահամար (օր՝ 077887788)",
+            eng:"Phone (example 077887788)"
         },
         firstname:{
             arm:"Անուն",

@@ -18,6 +18,9 @@ const AlertConfirmWindow = ({confirmDialogue,setConfirmDialogue}) => {
         message:"",
         confirmed:true
       })
+      if(confirmDialogue?.loadNext){
+        window.location.href = `/`
+      }
     }
 
     // Renders the element outside parent elements (for always being in the center of window)
@@ -34,7 +37,8 @@ const AlertConfirmWindow = ({confirmDialogue,setConfirmDialogue}) => {
       
              <button className='btn btnBlack'
                 onClick={confirm}>
-               {dialogues.confirm[currentLanguage]}
+                  {confirmDialogue?.loadNext ? dialogues.ok[currentLanguage] : dialogues.confirm[currentLanguage]}
+               
              </button>
           </div>
     </div>,

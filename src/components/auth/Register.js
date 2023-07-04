@@ -7,6 +7,7 @@ import axios from 'axios'
 import { selectToken, setToken } from '../../features/token/tokenSlice'
 import { selectUserAlert, setUserAlert } from '../../features/user/userSlice'
 import BASE_URL from '../../api/baseUrl'
+import AlertConfirmWindow from '../alertConfirmWindow/AlertConfirmWindow'
 
 
 const Register = () => {
@@ -26,6 +27,12 @@ const Register = () => {
     password:""
   })
 
+  const [congratsMessage,setCongratsMessage] = useState({
+    message:"",
+    confirmed:false,
+    loadNext:true
+  })
+
   const [passConfirm,setPassConfirm] = useState("")
   const passwordConfirm = user.password === passConfirm
 
@@ -36,7 +43,6 @@ const Register = () => {
    
   const changeValues = (e) => {
     if(inputRefs.current[e.target.name]){
-      console.log(inputRefs.current[e.target.name]);
        inputRefs.current[e.target.name].style.outline = "none"
        inputRefs.current[e.target.name].style.borderBottom = "2px solid #ccc"
     }
@@ -61,19 +67,34 @@ const Register = () => {
     })
   }
 
-
+     
   const handleSubmit = async(e) => {
           e.preventDefault()
+          setWrongField()
+          setErrorMessage()
         try{
           if(enableSumbit){
             if(!passwordConfirm){
               return setErrorMessage(dialogues.register.passConfirmFailed[currentLanguage])
             }
+            if(user?.email){
+              const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+              const validEmail = emailRegex.test(user?.email)
+
+              if(!validEmail){
+                setWrongField(dialogues.register.invalidEmail[currentLanguage])
+                return
+              }
+            }
             const response = await axios.post(`${BASE_URL}/user/register`,{...user})
             if(response.data.accessToken){
+              const accessToken = response.data.accessToken
+              localStorage.setItem(`token`,accessToken)
               localStorage.setItem(`logged`,true)
-              dispatch(setUserAlert(response.data.message))
-              window.location.href = `/`
+              setCongratsMessage({
+                ...congratsMessage,
+                message:response.data.message
+              })
             }
           }else{
             for(const key in user){
@@ -95,14 +116,20 @@ const Register = () => {
   }
 
 
+  console.log(inputRefs.current);
   return (
     <form className='auth_form' onSubmit={handleSubmit}>
+      {
+        congratsMessage?.message &&
+          <AlertConfirmWindow confirmDialogue={congratsMessage} 
+          setConfirmDialogue={setCongratsMessage}/>
+      }
           <h3>{dialogues.register.heading[currentLanguage]}</h3>
           <span className={wrongField ? `wrong_field` : "wrong_field_inactive"}>{wrongField}</span>
           <span className={errorMessage ? `error_message` : "error_message_inactive"}>{errorMessage}</span>
           <input 
             type='text'
-            placeholder={dialogues.placeholders.phone[currentLanguage]}
+            placeholder={dialogues.placeholders.phoneRegister[currentLanguage]}
             autoFocus
             ref={(ref) => inputRefs.current.phone = ref}
             name='phone'
