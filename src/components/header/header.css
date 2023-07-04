@@ -267,22 +267,22 @@ header{
     display: flex;
     flex-direction: column;
     gap:10px;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-start;
     padding:20px;
     background-color: #323232;
     transition: all 0.3s;
 }
-.responsive_menu > .menu li{
+.responsive_menu > .menu > li{
     width: 100%;
 }
-.responsive_menu > .menu li a{
+.responsive_menu > .menu > li a{
     color: #fff !important;
     padding:15px;
     display: block;
     width: 100%;
 }
-.responsive_menu > .menu li a:hover{
+.responsive_menu > .menu > li a:hover{
     border-bottom: 1px solid #ccc;
     background-color: initial;
 }
@@ -291,7 +291,7 @@ header{
     transition: all 0.3s;
 }
 
-.responsive_menu > .menu svg{
+.responsive_menu > .menu > svg{
     position: absolute;
     top:5px;
     right:0px;

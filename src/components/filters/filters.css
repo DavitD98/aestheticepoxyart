@@ -8,7 +8,7 @@
     width: 100%;
     display: flex;
     align-items: center;
-    gap:30px;
+    gap:10px;
     border-top:1px solid #eee;
     transition: all 0.3s;
 }
@@ -26,33 +26,31 @@
 }
 .filter_buttons{
     position: absolute;
-    right:180px;
+    right:0px;
     animation: apply_enable_appear 0.3s linear;
     transition: all 0.3s;
-
     display: flex;
-    gap:20px;
+    gap:5px;
     align-items: center;
-    
 }
 
 
 
 @keyframes apply_enable_appear {
     0%{
-        right: -50px;
+        right: -100px;
     }
     25%{
-        right: 100px;
+        right: -50px;
     }
     50%{
-        right:250px
+        right:0px
     }
     75%{
-        right:210px
+        right:20px
     }
     100%{
-        right:200px
+        right:0px
     }
 }
 

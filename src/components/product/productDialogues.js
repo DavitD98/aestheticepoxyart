@@ -2,7 +2,7 @@
 export const dialogues = {
     addCart:{
         addCartBtn:{
-            arm:"Ավելացնել զամբյուղ",
+            arm:"Զամբյուղ",
             eng:"Add cart"
         },
         alreadyAdded:{

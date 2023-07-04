@@ -14,9 +14,8 @@ import { fetchOrders } from "./features/orders/ordersSlice";
 import { fetchStatuses } from "./features/statuses/statusesSlice";
 import UseWindowResize from "./customHooks/UseWindowResize";
 import SearchComponent from "./components/searchComponent/SearchComponent";
-import Products from "./features/products/Products";
-import Footer from "./components/footer/Footer";
 import { selectToken } from "./features/token/tokenSlice";
+import Contact from "./components/contact/Contact";
 
 
 function App() {
@@ -90,7 +89,8 @@ function App() {
           {userTokenExpiredMessage  && <TokenExpired/>}
           <AlertWindow/>
           <Pages/>
-          {/* <Footer/> */}
+          {width > 768 && <Contact/>}
+          
 
        </div>
   );

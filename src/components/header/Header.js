@@ -15,6 +15,7 @@ import Cart from "../cart/Cart"
 import UseWindowResize from "../../customHooks/UseWindowResize"
 import { fetchProducts } from "../../features/products/productsSlice"
 import SearchComponent from "../searchComponent/SearchComponent"
+import Contact from "../contact/Contact"
 
 const Header = () => {
   const {width} = UseWindowResize()
@@ -51,6 +52,7 @@ const Header = () => {
     <ul className={responsiveMenuShow ? "menu menu_active" : "menu"}>
         <li><Link to={`/`} onClick={closeMenuWhenLinked}>{dialogues.menu[currentLanguage].shop}</Link></li>
         <li><Link to={`/history`} onClick={closeMenuWhenLinked}>{dialogues.menu[currentLanguage].history}</Link></li>
+        <Contact/>
     </ul>
   )
 
@@ -111,7 +113,7 @@ const Header = () => {
              
                {
                 // Big size
-                width > 1024 ?
+                width >= 1024 ?
                 renderMenu()
 
                 // Small Size

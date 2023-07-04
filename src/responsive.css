@@ -2,9 +2,54 @@
     .App{
         width: 100%;
     }
-    
 }
 
+@media (max-width:1200px) {
+   /*Filters*/
+   .filters{
+     position: fixed;
+     margin-top:10px;
+     left:0px;
+     transform: translate(-100%);
+     width: 400px;
+     display: flex;
+     flex-direction: column;
+     gap:15px;
+     align-items: center;
+     height: 100vh;
+     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 10px;
+     z-index:9999;
+     background-color: #fff;
+  }
+  .price_filters {
+     display: flex;
+  }
+  .filter_buttons{
+     width: 100%;
+     position: absolute;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     top:220px;
+   }
+  @keyframes filter_buttons_appear {
+     0%{
+         left:-10%;
+     }
+     25%{
+         left:0%;
+     }
+     50%{
+         left:10%
+     }
+     75%{
+         left:20%
+     }
+     100%{
+         left:32%
+     }
+  }
+}
 @media (max-width:1024px) {
     .App{
         width: 100%;
@@ -32,7 +77,7 @@
      .cart{
         width: 370px;
         right: 0px;
-        transform: translateX(100%);
+        transform: translateX(105%);
      }
      .cart_active{
         transform: translateX(0%);
@@ -45,56 +90,12 @@
         transform: translate(-30px);
      }
 
-     /*Filters*/
-     .filters{
-        position: fixed;
-        margin-top:10px;
-        left:0px;
-        transform: translate(-100%);
-        width: 400px;
-        display: flex;
-        flex-direction: column;
-        gap:15px;
-        align-items: center;
-        height: 100vh;
-        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 10px;
-        z-index:9999;
-        background-color: #fff;
-     }
-     .price_filters {
-        display: flex;
-     }
-     .filter_buttons{
-        position: absolute;
-        top:220px;
-        left:30%;
-        transform: translateX(-30%);
-
-     }
-     @keyframes filter_buttons_appear {
-        0%{
-            left:-10%;
-        }
-        25%{
-            left:0%;
-        }
-        50%{
-            left:10%
-        }
-        75%{
-            left:20%
-        }
-        100%{
-            left:32%
-        }
-     }
-
      /*products*/
      .product_container{
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        justify-content: space-between;
+        justify-content: flex-start;
      }
      .product_card{
         width: 280px;
@@ -153,6 +154,8 @@
       width: 70%;
     }
 }
+
+
 
 @media (max-width:424px) {
    .ordered_products_container{

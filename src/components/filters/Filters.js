@@ -76,13 +76,13 @@ const Filters = () => {
 
   return (
     <div className='filters_main'>
-      { width <= 1024 && 
+      { width <= 1200 && 
          <button className='btn btnBlack'
            onClick={() => setResponsiveFilterShow(!responsiveFilterShow)}>
             {dialogues.filterShow[currentLanguage]}
         </button>}
       
-      <div className={width > 1024 ? "filters"
+      <div className={width > 1200 ? "filters"
                       : responsiveFilterShow ? "filters filters_active" : "filters" }>
 
 

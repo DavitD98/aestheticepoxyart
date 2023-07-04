@@ -1,7 +1,7 @@
 .cart{
     width: 500px;
     position: fixed;
-    overflow: scroll;
+    overflow-y: scroll;
     max-height: 500px;
     top: 70px;
     right:80px;
@@ -12,7 +12,7 @@
     background-color: #f8f8f8;
     z-index: 9999999;
     padding:10px;
-    box-shadow: -10px 0px 15px #d2d2d2;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     transition: all 0.3s;
     cursor:default;
     transition: all 0.3s;

@@ -75,7 +75,12 @@
     display: inline-block;
     padding:8px 50px!important;
 }
-
+.card_second_section .btn svg{
+   margin: 0px 10px;
+}
+.card_second_section .btn:hover svg{
+    fill:red
+}
 /*Admin*/
 
 .btn_options{

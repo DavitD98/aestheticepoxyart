@@ -10,6 +10,8 @@ import { Link, useNavigate } from 'react-router-dom'
 import { selectCategoryById } from '../../features/categories/categoriesSlice'
 import { selectTypeById } from '../../features/types/typesSlice'
 import AlertConfirmWindow from '../alertConfirmWindow/AlertConfirmWindow'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faBagShopping} from "@fortawesome/free-solid-svg-icons"
 
 const Product = React.memo(({id}) => {
     const navigate = useNavigate()
@@ -27,6 +29,14 @@ const Product = React.memo(({id}) => {
        message:"",
        confirmed:false
      })
+     const [isHovered,setIsHovered] = useState(false)
+
+     const handleMouseEnter = () => {
+      setIsHovered(true)
+     }
+     const handleMouseLeave = () => {
+      setIsHovered(false)
+     }
   
      useEffect(() => {
          const deleteProductAfterConfirm = async() => {
@@ -132,7 +142,12 @@ const Product = React.memo(({id}) => {
                         </Link>
                      </div>
                     :   <button className='btn btnBlack' 
-                          onClick={handleAddCart}>{dialogues.addCart.addCartBtn[currentLanguage]}
+                          onClick={handleAddCart}
+                          onMouseEnter={handleMouseEnter} 
+                          onMouseLeave={handleMouseLeave}>
+                            {dialogues.addCart.addCartBtn[currentLanguage]}
+                            <FontAwesomeIcon icon={faBagShopping} size="lg" 
+                             color={isHovered ? '#323232' : !isHovered ? "#fff" : "#fff"} />
                         </button>
                  
                  }

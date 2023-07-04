@@ -6,6 +6,7 @@ import { addCart, decrementCartProduct, incrementCartProduct, removeProductCart,
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faXmark} from "@fortawesome/free-solid-svg-icons"
 import { selectToken } from '../../features/token/tokenSlice'
+import { dialogues } from '../cart/cartDialogues'
 
 const   CartProduct = ({id}) => {
     const dispatch = useDispatch()
@@ -36,7 +37,10 @@ const   CartProduct = ({id}) => {
 
       <div className='cart_product_info'>
         <h4>{product?.name?.[currentLanguage]}</h4>
-        <p>{product?.description?.[currentLanguage]}</p>
+        <p style={{color:"#ef7215"}}>
+            {product?.price * product?.quantity} 
+            {dialogues.amCurrency[currentLanguage]}
+        </p>
       </div>
 
         <div className='quantity_section'>
