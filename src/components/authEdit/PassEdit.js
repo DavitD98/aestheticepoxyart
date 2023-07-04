@@ -37,12 +37,12 @@ const PassEdit = () => {
        }
     },[userError])
     
-    // navigate page
-    const navigatePage = () => {
-      setUserAlert("")
-    }
     // Change values
     const changeValues = (e) => {
+      if(inputRefs.current[e.target.name]){
+        inputRefs.current[e.target.name].style.outline = "none"
+        inputRefs.current[e.target.name].style.borderBottom = "2px solid #ccc"
+     }
       setPasswordObj({
           ...passwordObj,
           [e.target.name]:e.target.value
@@ -70,7 +70,8 @@ const PassEdit = () => {
         }else{
             for(const key in passwordObj){
                 if(!passwordObj[key]){
-                    console.log(key);
+                  inputRefs.current[key].style.outline = "1px solid #D10000"
+                  inputRefs.current[key].style.borderBottom = "none"
                 }
             }
         }
