@@ -61,6 +61,7 @@ const Header = () => {
      <ul className={responsiveMenuShow ? "menu menu_active" : "menu"}>
           <li><Link to={`/user/login`} onClick={closeMenuWhenLinked}>{dialogues.loginAndRegister[currentLanguage].login}</Link></li>
           <li><Link to={`/`} onClick={closeMenuWhenLinked}>{dialogues.menu[currentLanguage].shop}</Link></li>
+          <Contact/>
      </ul>
   )
 
